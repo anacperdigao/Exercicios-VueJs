@@ -1,0 +1,27 @@
+<body>
+    
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <input type="text" @input="alterarTitulo">
+    <p>{{ titulo }}</p>
+</div>
+
+
+<script>
+
+new Vue({
+    el: '#app',
+    data: {
+        titulo: 'Usando VueJS 2!'
+    },
+    methods: {
+        alterarTitulo (evento) {
+            this.titulo = evento.target.value
+        }
+    }
+})
+
+</script>
+
+</body>
