@@ -6,8 +6,18 @@
         <ul>
             <li v-for='(cor, index) in cores' :key='index'> {{ cor }} - {{ index }} </li>
         </ul>
-    </div>
+
+    <hr>
+
+        <ul>
+            <li v-for='(pessoa,index) in pessoas' :key='index'>
+                <div v-for='(valor, chave, index) in pessoa' :key='index'>
+                    {{ index }} - {{ chave }} = {{ valor }}
+                </div>
+            </li>
+        </ul>
     
+    </div>
     <script>
     
     new Vue({
